@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Objeto con los datos del usuario a enviar en formato JSON
+        
         const userData = {
             codigo: username,
             clave: password
         };
 
-        // Configurar la solicitud POST
+        
         const requestOptions = {
             method: 'POST',
             headers: {
@@ -22,20 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify(userData)
         };
 
-        // Realizar la solicitud POST al servicio de login
-        fetch('https://api-parcial.crangarita.repl.co/login', requestOptions)
-            .then(response => response.json())
+        
+        fetch('https://24a0dac0-2579-4138-985c-bec2df4bdfcc-00-3unzo70c406dl.riker.replit.dev/login', requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    
+                    throw new Error('Credenciales incorrectas');
+                }
+                return response.json();
+            })
             .then(data => {
-                // Guardar el objeto de usuario en el localStorage
+                
                 localStorage.setItem('usuario', JSON.stringify(data));
-
-                // Redireccionar a la página principal (por ejemplo, main.html)
                 window.location.href = 'main.html';
             })
             .catch(error => {
                 console.error('Error al iniciar sesión:', error);
-                // Mostrar un mensaje de error al usuario
-                alert('Error al iniciar sesión. Por favor, inténtalo de nuevo.');
+                alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
             });
     });
 });

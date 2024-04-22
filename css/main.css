@@ -8,14 +8,22 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .logo {
     grid-column: 1;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+
 .logo img {
-    max-width: 100%;
+    max-width: 400px;
 }
 
 .main-content {

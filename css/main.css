@@ -32,117 +32,16 @@ body {
     gap: 20px;
 }
 
-.card-container button {
-    margin: 5px; /* Espacio entre las cartas */
-    width: 20%; /* Anchura del 20% del contenedor */
-    padding-bottom: 30%; /* Altura en función de la relación de aspecto (por ejemplo, 3:4) */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo con 10% de opacidad */
-    border: none; /* Quita el borde */
-    position: relative; /* Necesario para posicionar el pseudoelemento */
-}
 
-
-
-.card-container button {
-    margin: 5px; /* Espacio entre las cartas */
-    max-width: calc(25% - 10px); /* 25% del ancho del contenedor con margen */
-    max-height: 150px; /* Altura máxima de las cartas */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo con 10% de opacidad */
-    border: none; /* Quita el borde */
-    position: relative; /* Necesario para posicionar el pseudoelemento */
-}
-
-.card-container button:hover {
-    cursor: pointer; /* Cambia la flecha del cursor a una mano */
-}
-
-.card-container button:hover::before {
-    content: ""; /* Crea un pseudoelemento antes del contenido del botón */
-    position: absolute; /* Posiciona el pseudoelemento */
-    top: 0; /* Alinea el pseudoelemento en la parte superior del botón */
-    left: 0; /* Alinea el pseudoelemento en la parte izquierda del botón */
-    width: 100%; /* Toma el ancho completo del botón */
-    height: 100%; /* Toma la altura completa del botón */
-    background-color: rgba(0, 0, 0, 0.15); /* Color de fondo con 15% de opacidad */
-    z-index: 1; 
-    pointer-events: none; 
-}
-
-.card-container button img {
-    width: 100%;
-    height: auto;
-    max-height: 100%; /* Altura máxima de la imagen */
-    display: block; /* Elimina el espacio debajo de la imagen */
-    transition: filter 0.3s ease; /* Agrega una transición suave */
-}
-
-.card-container button:hover img {
-    filter: brightness(85%); /* Hace la imagen un 15% más oscura */
-}
 
 .info-container {
     padding: 20px;
     background-color: #f9f9f9;
 }
 
-#cardTable {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo con 10% de opacidad */
-    border-collapse: collapse; /* Colapsa los bordes de la tabla */
-}
-
-#cardTable th, #cardTable td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo con 10% de opacidad */
-    color: #000; /* Color de texto */
-}
-
-#cardTable th {
-    background-color: #4CAF50; /* Color de fondo del encabezado */
-    color: white; /* Color de texto del encabezado */
-}
-
-#cardTable tr:hover {
-    background-color: rgba(76, 175, 80, 0.3); /* Color verde claro al pasar el mouse */
-}
-
-#addCardForm button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-#addCardForm button[type="submit"]:hover {
-    background-color: #45a049;
-}
 
 
 
-#addCardForm label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#addCardForm input[type="number"],
-#addCardForm input[type="text"],
-#addCardForm button[type="submit"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#addCardForm button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-#addCardForm button[type="submit"]:hover {
-    background-color: #45a049;
-}
 
 @media only screen and (max-width: 768px) {
     .container {

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header><div class="container">
+        <div class="logo">
+            <img src="imagenes/showdown.png" alt="Logo">
+        </div>
+    </header>
+        <div class="main-content">
+            <div class="card-container">
+                <button data-numero="1"><img src="imagenes/1.png" alt="" /></button>
+                <button data-numero="2"><img src="imagenes/2.png" alt="" /></button>
+                <button data-numero="3"><img src="imagenes/3.png" alt="" /></button>
+                <button data-numero="4"><img src="imagenes/4.png" alt="" /></button>
+                <button data-numero="5"><img src="imagenes/5.png" alt="" /></button>
+                <button data-numero="6"><img src="imagenes/6.png" alt="" /></button>
+                <button data-numero="7"><img src="imagenes/7.png" alt="" /></button>
+                <button data-numero="8"><img src="imagenes/8.png" alt="" /></button>
+                <button data-numero="9"><img src="imagenes/9.png" alt="" /></button>
+                <button data-numero="10"><img src="imagenes/10.png" alt="" /></button>
+                <button data-numero="11"><img src="imagenes/11.png" alt="" /></button>
+                <button data-numero="12"><img src="imagenes/12.png" alt="" /></button>
+                <button data-numero="13"><img src="imagenes/13.png" alt="" /></button>
+            </div>
+            <div class="info-container">
+                <h2>Tabla de Cartas</h2>
+                <table id="cardTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Carta</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+                <h2>Agregar Carta</h2>
+                <form id="addCardForm">
+                    <label for="cardNumber">Número:</label>
+                    <input type="number" id="cardNumber" name="cardNumber" min="1" max="13" required>
+                    <label for="cardName">Nombre de la Carta:</label>
+                    <input type="text" id="cardName" name="cardName" required>
+                    <button type="submit">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
